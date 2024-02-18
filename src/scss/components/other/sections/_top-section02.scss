@@ -1,0 +1,22 @@
+// セクション・トップページ02
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.topSection02 {
+
+  &__cards {
+    margin-block-start: 20px;
+  }
+
+
+  @include g.mq() {
+
+    &__cards {
+      margin-block-start: 40px;
+    }
+  }
+}

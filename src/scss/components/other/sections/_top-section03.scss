@@ -1,0 +1,63 @@
+// セクション・トップページ03
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+.topSection03 {
+
+  &__list {
+    margin-block-start: 20px;
+
+    &Link {
+      display: flex;
+      align-items: center;
+      border: solid 1px g.$grayColor1;
+      line-height: 1.5;
+      text-decoration-line: none;
+      transition: all .3s;
+
+      &:hover,
+      &:focus {
+        border-color: g.$x-baseColor;
+        background-color: g.$baseColor;
+        color: g.$mainColor;
+      }
+    }
+
+    &Text {
+      padding: 10px 10px 10px 20px;
+      font-size: min(18px, calc(16 / 375 * 100vw));
+    }
+
+    &Figure {
+      flex-shrink: 0;
+      width: min(120px, calc(120 / 375 * 100vw));
+    }
+
+    &Image {
+      width: 100%;
+    }
+  }
+
+
+  // @include g.mq('sm-min') {
+  //   &__list {
+  //     max-width: none;
+  //     grid-template-columns:
+  //       repeat(2, 1fr);
+  //   }
+  // }
+
+
+  @include g.mq('md-min') {
+
+    &__list {
+      margin-block-start: 40px;
+
+      // grid-template-columns:
+      //   repeat(3, 1fr);
+    }
+  }
+}

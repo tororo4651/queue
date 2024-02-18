@@ -1,0 +1,211 @@
+// メインコンテンツ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+
+.main {
+  padding-block: 39px 80px;
+
+  &__lead {
+    margin-block: 40px;
+
+    &Link {
+      text-underline-position: under;
+    }
+  }
+
+  &__nav {
+    margin-block: 40px;
+  }
+
+  &__pagination {
+    margin-block-start: 50px;
+  }
+
+
+  @include g.mq {
+    padding-block: 59px 100px;
+
+    &__lead {
+      margin-block: 60px 80px;
+      text-align: center;
+    }
+
+    &__nav {
+      margin-block: 60px 50px;
+    }
+
+    &__pagination {
+      margin-block-start: 80px;
+    }
+  }
+
+
+
+  // トップページ
+  &--top {
+    padding-block-start: 0;
+
+    &__section {
+      margin-block-start: 80px;
+    }
+
+
+    @include g.mq {
+
+      &__section {
+        margin-block-start: 100px;
+      }
+    }
+  }
+
+
+
+  // 商品一覧
+  &--products {
+
+    &__nav {
+      margin-block-start: 40px;
+    }
+
+    &__pagination {
+      margin-block-start: 50px;
+    }
+
+
+    @include g.mq() {
+
+      &__nav {
+        margin-block-start: 60px;
+      }
+
+      &__pagination {
+        margin-block-start: 80px;
+      }
+    }
+  }
+
+
+
+  // 商品
+  &--product {
+
+    &__content {
+      margin-top: 80px;
+      margin-inline: auto;
+      max-width: 800px;
+
+      &Image {
+        width: 100%;
+      }
+
+      &Text {
+        margin-top: 1.75em;
+        text-align: justify;
+        text-justify: inter-ideograph;
+      }
+    }
+
+    &__cartBox01,
+    &__pagination {
+      margin-block-start: 80px;
+    }
+
+    &__cartBox02 {
+      margin-block-start: 40px;
+    }
+
+
+    @include g.mq {
+
+      &__content,
+      &__cartBox01,
+      &__cartBox02,
+      &__pagination {
+        margin-top: 100px;
+      }
+    }
+  }
+
+
+
+  // ねこ店員紹介
+  &--staff {
+
+    &__section {
+
+      & + & {
+        margin-top: 50px;
+      }
+    }
+
+
+    @include g.mq {
+
+      &__section {
+
+        &:first-of-type {
+          margin-top: 130px;
+        }
+
+        & + & {
+          margin-top: 160px;
+        }
+      }
+    }
+  }
+
+
+
+  // よくあるご質問
+  &--faq {
+
+    &__accordion {
+      margin-inline: calc(50% - (50vw - 7.5px));
+    }
+
+
+    @include g.mq {
+
+      &__accordion {
+        margin-inline: 0;
+      }
+    }
+  }
+
+
+
+  // ねこブログ・トップページ
+  &--blogTop {
+
+    &__media {
+      border-top: dashed 1px g.$x-baseColor;
+
+      &:last-of-type {
+        border-bottom: dashed 1px g.$x-baseColor;
+      }
+    }
+  }
+
+
+
+  // 特定商取引法に関する表記
+  &--law {
+
+    &__table {
+      margin-block-start: 40px;
+    }
+
+
+    @include g.mq {
+
+      &__table {
+        margin-block-start: 60px;
+      }
+    }
+  }
+
+}

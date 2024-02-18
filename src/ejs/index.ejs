@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('./components/common/_head.ejs', { pageTitle: 'トップページ', description: "ハンドメイド猫グッズのお店 l'atelier Queueのホームページです。1点ものの手作り猫グッズ、猫モチーフのアクセサリー・雑貨などを販売しています。" }) %>
+
+
+<body>
+
+<%- include('./components/common/_top-header') %>
+
+
+<%- include('./components/common/_gnav') %>
+
+
+<main class="main main--top">
+  <div class="l-container">
+
+    <section class="main--top__section topSection01">
+      <header class="topSection01__heading lv2Heading lv2Heading--icon lv2Heading--btn">
+        <h2 class="lv2Heading__text lv2Heading--icon__text lv2Heading--btn__text">お知らせ</h2>
+
+        <a class="lv2Heading__btn sm-btn" href="/blog/">一覧へ</a>
+      </header>
+
+      <dl class="topSection01__list">
+        <dt class="topSection01__listDate">
+          <time datetime="2021-11-01">2021-11-01</time>
+        </dt>
+
+        <dd class="topSection01__listDesc">
+          <span class="topSection01__listTag tag tag--new">新商品情報</span>
+
+          <a class="topSection01__listLink" href="/blog/detail.html">【焼印付】爪とぎ型キーホルダー登場！</a>
+        </dd>
+
+        <dt class="topSection01__listDate">
+          <time datetime="2021-10-28">2021-10-28</time>
+        </dt>
+
+        <dd class="topSection01__listDesc">
+          <span class="topSection01__listTag tag">入荷情報</span>
+
+          <a class="topSection01__listLink" href="#">里親募集型猫カフェ猫式さんの委託販売ブースにアクセサリー・猫首輪・けりぐるみを納品しました。</a>
+        </dd>
+
+        <dt class="topSection01__listDate">
+          <time datetime="2021-10-12">2021-10-12</time>
+        </dt>
+
+        <dd class="topSection01__listDesc">
+          <span class="topSection01__listTag tag">イベント出店</span>
+
+          <a class="topSection01__listLink" href="#">ニャンフェス14に参加決定。鋭意新作製作中です！</a>
+        </dd>
+      </dl>
+    </section>
+
+
+    <section class="main--top__section topSection02">
+      <header class="topSection02__heading lv2Heading lv2Heading--icon">
+        <h2 class="lv2Heading__text lv2Heading--icon__text">おすすめ商品</h2>
+      </header>
+
+      <div class="topSection02__cards primaryGrid primaryGrid--largeGap">
+
+        <section class="productCard">
+          <h3 class="productCard__heading">【焼印付】爪とぎ型キーホルダー</h3>
+
+          <figure class="productCard__figure">
+            <img class="productCard__image" src="../images/products/pd001.jpg" alt="" width="636" height="380">
+          </figure>
+
+          <p class="productCard__text">可愛らしいミニチュアサイズの「猫の爪とぎ」型キーホルダー。木製ケースの裏面には猫シルエットの焼印付きでオシャレ！</p>
+
+          <div class="productCard__price">
+            000円<span class="productCard__priceText">(税抜)</span>
+          </div>
+
+          <a class="productCard__btn moreBtn" href="./products/detail.html">詳細を見る</a>
+
+          <div class="productCard__ribbon">新商品</div>
+        </section><!-- /.topSection02__card.productCard -->
+
+        <section class="productCard">
+          <h3 class="productCard__heading">肉球ブローチ（7個セット）</h3>
+
+          <figure class="productCard__figure">
+            <img class="productCard__image" src="../images/products/pd002.jpg" alt="" width="636" height="380">
+          </figure>
+
+          <p class="productCard__text">定番の肉球型のレジンブローチ（7個セット）です。</p>
+
+          <div class="productCard__price">
+            000円<span class="productCard__priceText">(税抜)</span>
+          </div>
+
+          <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+        </section><!-- /.topSection02__card.productCard -->
+
+        <section class="productCard">
+          <h3 class="productCard__heading">レース猫首輪（鈴付き）</h3>
+
+          <figure class="productCard__figure">
+            <img class="productCard__image" src="../images/products/pd003.jpg" alt="" width="636" height="380">
+          </figure>
+
+          <p class="productCard__text">アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。</p>
+
+          <div class="productCard__price">
+            000円<span class="productCard__priceText">(税抜)</span>
+          </div>
+
+          <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+        </section><!-- /.topSection02__card.productCard -->
+
+      </div><!-- /.topSection02__cards -->
+    </section>
+
+
+    <section class="main--top__section topSection03">
+      <header class="topSection03__heading lv2Heading lv2Heading--icon">
+        <h2 class="lv2Heading__text lv2Heading--icon__text">商品カテゴリー</h2>
+      </header>
+
+      <ul class="topSection03__list primaryGrid">
+        <li class="topSection03__listItem">
+          <a class="topSection03__listLink" href="#">
+            <figure class="topSection03__listFigure">
+              <img class="topSection03__listImage" src="../images/products/thumb_cate01.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="topSection03__listText">レジンブローチ</div>
+          </a>
+        </li>
+
+        <li class="topSection03__listItem">
+          <a class="topSection03__listLink" href="#">
+            <figure class="topSection03__listFigure">
+              <img class="topSection03__listImage" src="../images/products/thumb_cate02.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="topSection03__listText">猫用首輪</div>
+          </a>
+        </li>
+
+        <li class="topSection03__listItem">
+          <a class="topSection03__listLink" href="#">
+            <figure class="topSection03__listFigure">
+              <img class="topSection03__listImage" src="../images/products/thumb_cate03.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="topSection03__listText">けりぐるみ</div>
+          </a>
+        </li>
+
+        <li class="topSection03__listItem">
+          <a class="topSection03__listLink" href="#">
+            <figure class="topSection03__listFigure">
+              <img class="topSection03__listImage" src="../images/products/thumb_cate04.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="topSection03__listText">アクセサリー</div>
+          </a>
+        </li>
+
+        <li class="topSection03__listItem">
+          <a class="topSection03__listLink" href="#">
+            <figure class="topSection03__listFigure">
+              <img class="topSection03__listImage" src="../images/products/thumb_cate05.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="topSection03__listText">その他雑貨</div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="main--top__section topSection04">
+      <header class="topSection04__heading lv2Heading lv2Heading--center">
+        <h2 class="lv2Heading__text">委託販売先</h2>
+      </header>
+
+      <p class="topSection04__lead">
+        当店は現在以下の3店舗のレンタルボックスにて委託販売をさせていただいております。<br>
+        商品を実際に手にとってお確かめいただけますので、お近くの方はお気軽にお立ち寄り下さい。
+      </p>
+
+      <section class="topSection04__section shopMedia">
+        <div class="shopMedia__body">
+          <h3 class="shopMedia__heading">台湾スイーツ豆花専門 黒猫豆花 様</h3>
+
+          <dl class="shopMedia__list">
+            <dt class="shopMedia__listTitle">住所</dt>
+            <dd class="shopMedia__listDesc">神奈川県川崎市高津区二子2丁目7-40　フォーレスト多摩川102</dd>
+
+            <dt class="shopMedia__listTitle">営業時間</dt>
+            <dd class="shopMedia__listDesc">10:00-21:00（時短営業中は20:00まで）</dd>
+
+            <dt class="shopMedia__listTitle">定休日</dt>
+            <dd class="shopMedia__listDesc">水曜日</dd>
+
+            <dt class="shopMedia__listTitle">website</dt>
+            <dd class="shopMedia__listDesc"><a href="https://kuroneko-douhua.com/">https://kuroneko-douhua.com/</a></dd>
+          </dl>
+        </div><!-- /.shopMedia__body -->
+
+        <figure class="shopMedia__figure">
+          <img class="shopMedia__image" src="../images/top/img_rental_kuroneko_douhua.jpg" alt="" width="440" height="303" loading="lazy">
+        </figure>
+      </section>
+
+      <section class="topSection04__section shopMedia">
+        <div class="shopMedia__body">
+          <h3 class="shopMedia__heading">May’s Cafe -ハンドメイド雑貨＆CAFE-  様</h3>
+
+          <dl class="shopMedia__list">
+            <dt class="shopMedia__listTitle">住所</dt>
+            <dd class="shopMedia__listDesc">東京都世田谷区太子堂5-17-20-1F</dd>
+
+            <dt class="shopMedia__listTitle">営業時間</dt>
+            <dd class="shopMedia__listDesc">土日祝日11:00〜19:00のみ営業中</dd>
+
+            <dt class="shopMedia__listTitle">定休日</dt>
+            <dd class="shopMedia__listDesc">月〜金曜日</dd>
+
+            <dt class="shopMedia__listTitle">Instagram</dt>
+            <dd class="shopMedia__listDesc"><a href="https://www.instagram.com/mays._.cafe/">https://www.instagram.com/mays._.cafe/</a></dd>
+          </dl>
+        </div><!-- /.shopMedia__body -->
+
+        <figure class="shopMedia__figure">
+          <img class="shopMedia__image" src="../images/top/img_rental_mayscafe.jpg" alt="" width="440" height="303" loading="lazy">
+        </figure>
+      </section>
+
+      <section class="topSection04__section shopMedia">
+        <div class="shopMedia__body">
+          <h3 class="shopMedia__heading">里親募集型猫カフェ 猫式 様</h3>
+
+          <dl class="shopMedia__list">
+            <dt class="shopMedia__listTitle">住所</dt>
+            <dd class="shopMedia__listDesc">神奈川県川崎市高津区溝口1－20－10　東方ビル3F</dd>
+
+            <dt class="shopMedia__listTitle">営業時間</dt>
+            <dd class="shopMedia__listDesc">12：00～20：00（最終受付19:30）</dd>
+
+            <dt class="shopMedia__listTitle">定休日</dt>
+            <dd class="shopMedia__listDesc">月曜日</dd>
+
+            <dt class="shopMedia__listTitle">website</dt>
+            <dd class="shopMedia__listDesc"><a href="https://www.neko-shiki.net/">https://www.neko-shiki.net/</a></dd>
+          </dl>
+        </div><!-- /.shopMedia__body -->
+
+        <figure class="shopMedia__figure">
+          <img class="shopMedia__image" src="../images/top/img_rental_nekoshiki.jpg" alt="" width="440" height="303" loading="lazy">
+        </figure>
+      </section>
+    </section>
+
+
+    <section class="main--top__section topSection05">
+      <header class="topSection05__heading lv2Heading">
+        <h2 class="lv2Heading__text">プロフィール</h2>
+      </header>
+
+      <img class="topSection05__image" src="../images/common/img_profile.jpg" alt="@latelierqueue のアカウント写真" width="280" height="280">
+
+      <p class="topSection05__account">@latelierqueue</p>
+
+      <p class="topSection05__text">
+        猫雑貨・猫おもちゃ、その他ハンドメイド<br>
+        時々農家になります。
+      </p>
+
+      <ul class="topSection05__sns">
+        <li class="topSection05__snsItem">
+          <a class="topSection05__snsLink" href="#" target="_blank">
+            <img class="topSection05__snsImage" src="../images/common/sns_twitter.png" alt="Twitter" width="160" height="160" loading="lazy">
+          </a>
+        </li>
+
+        <li class="topSection05__snsItem">
+          <a class="topSection05__snsLink" href="#" target="_blank">
+            <img class="topSection05__snsImage" src="../images/common/sns_insta.png" alt="Instagram" width="160" height="160" loading="lazy">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </div><!-- /.l-container -->
+</main>
+
+
+<%- include('./components/common/_footer', { src: '../' }) %>
+
+
+</body>
+</html>

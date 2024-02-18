@@ -1,0 +1,74 @@
+// リスト・プライマリ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.primaryList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: -7.5px;
+  margin-block-end: -20px;
+
+  &__item {
+    width: 50%;
+    padding-inline: 7.5px;
+    padding-block-end: 20px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    position: relative;
+    margin-block-start: 1em;
+    @include g.fz(14);
+    padding-inline-start: 1em;
+    font-weight: bold;
+    line-height: 1.28;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.4em;
+      left: 0;
+      width: 0.6em;
+      height: 0.6em;
+      border-top: solid 2px;
+      border-right: solid 2px;
+      rotate: 45deg;
+    }
+  }
+
+
+  @include g.mq() {
+    margin-inline: -10px;
+
+    &__item {
+      width: calc(100% / 3);
+      padding-inline: 10px;
+    }
+
+    &__link {
+      transition: color .3s;
+
+      @include g.hover-focus {
+        color: g.$mainColor;
+      }
+    }
+
+    &__title {
+      @include g.fz(18);
+    }
+  }
+
+
+  @include g.mq('lg-min') {
+
+    &__item {
+      width: calc(100% / 4);
+    }
+  }
+}

@@ -1,0 +1,112 @@
+// 共通・ページネーション01
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.pagination01 {
+
+  &__list {
+    margin-inline: -2px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    padding-inline: 2px;
+  }
+
+  &__number,
+  &__current,
+  &__dots,
+  &__prev,
+  &__next {
+    height: min(40px, 40 / 375 * 100vw);
+    padding-inline: .5em;
+    border-radius: 6px;
+    background-color: g.$baseColor;
+    color: g.$mainColor;
+    font-size: min(14px, 14 / 375 * 100vw);
+    font-weight: bold;
+    text-decoration-line: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__number,
+  &__current {
+    min-width: min(40px, 40 / 375 * 100vw);
+  }
+
+  &__current {
+    background-color: g.$x-baseColor;
+    color: g.$whiteColor;
+  }
+
+  &__dots {
+    padding-inline: 0;
+    background-color: transparent;
+  }
+
+  &__prev {
+    padding-inline: .8em;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: calc(8em / 14);
+      height: calc(8em / 14);
+      border-left: solid 2px;
+      border-bottom: solid 2px;
+      rotate: 45deg;
+    }
+  }
+
+  &__next {
+    padding-inline: .8em;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: calc(8em / 14);
+      height: calc(8em / 14);
+      border-top: solid 2px;
+      border-right: solid 2px;
+      rotate: 45deg;
+    }
+  }
+
+
+  @include g.mq(md-min) {
+
+    &__list {
+      margin-inline: -5px;
+    }
+
+    &__item {
+      padding-inline: 5px;
+    }
+
+    &__number,
+    &__current,
+    &__dots,
+    &__prev,
+    &__next {
+      height: 50px;
+      @include g.fz(18);
+    }
+
+    &__number,
+    &__current {
+      min-width: 50px;
+    }
+
+    &__prev,
+    &__next {
+      padding-inline: 27px;
+    }
+  }
+}

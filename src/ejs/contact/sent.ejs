@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', { pageTitle: '送信完了　CONTACT', description: "ハンドメイド猫グッズのお店 l'atelier Queue のお問い合わせページです。" }) %>
+
+
+<body class="sent">
+
+<%- include('../components/common/_header') %>
+
+
+<%- include('../components/common/_gnav') %>
+
+
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list l-container">
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">ホーム</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <span aria-current="page">お問い合わせ</span>
+    </li>
+  </ol>
+</nav>
+
+
+<main class="main">
+  <div class="l-sm-container">
+
+    <h1 class="lv1Heading">
+      送信完了
+      <span class="lv1Heading__en">CONTACT</span>
+    </h1>
+
+    <div class="sent__content">
+      <p class="sent__contentTitle">お問い合わせありがとうございました。</p>
+
+      <p class="sent__contentText">
+        お問い合わせ内容を確認させていただき、近日中に返信させていただきます。<br>
+        数日経っても返信が無い場合は、大変お手数ですが改めてご連絡いただけますよう、お願い申し上げます。
+      </p>
+
+      <p class="sent__contentText">なお、お問い合わせ内容によっては返信をいたしかねる場合もございますのでご了承下さい。</p>
+    </div>
+
+    <a class="sent__topBtn prevBtn" href="/">トップページへ戻る</a>
+
+  </div><!-- /.l-sm-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

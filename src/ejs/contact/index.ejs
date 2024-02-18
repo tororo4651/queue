@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', { pageTitle: 'お問い合わせ　CONTACT', description: "ハンドメイド猫グッズのお店 l'atelier Queue のお問い合わせページです。" }) %>
+
+
+<body class="contact">
+
+<%- include('../components/common/_header') %>
+
+
+<%- include('../components/common/_gnav') %>
+
+
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list l-container">
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">ホーム</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <span aria-current="page">お問い合わせ</span>
+    </li>
+  </ol>
+</nav>
+
+
+<main class="main">
+  <div class="l-sm-container">
+
+    <h1 class="lv1Heading">
+      お問い合わせ
+      <span class="lv1Heading__en">CONTACT</span>
+    </h1>
+
+    <p class="main__lead">当店へのご質問・お問い合わせ等は以下のフォームからご連絡下さい。</p>
+
+
+    <form class="contactForm" action="#" method="POST">
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="type">
+          お問い合せ種類
+
+          <span class="contactForm__tag tag tag--require">必須</span>
+        </label>
+
+        <div class="contactForm__selectWrapper">
+          <select class="contactForm__select" id="type" name="type" required>
+            <option value="" selected disabled>選択してください</option>
+            <option value="商品について">商品について</option>
+            <option value="購入方法について">購入方法について</option>
+            <option value="在庫・入荷情報について">在庫・入荷情報について</option>
+            <option value="その他のお問い合わせ">その他のお問い合わせ</option>
+          </select>
+        </div><!-- /.contactForm__selectWrapper -->
+
+        <div class="contactForm__warning" role="alert">お問合せ種類を選択してください。</div>
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="content">
+          お問い合わせ内容
+
+          <span class="contactForm__tag tag tag--require">必須</span>
+        </label>
+
+        <textarea class="contactForm__textarea" id="content" name="content" placeholder="お問い合わせ内容をご記入下さい。" required></textarea>
+
+        <div class="contactForm__warning" role="alert">お問い合わせ内容を記入してください。</div>
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="name">
+          お名前
+
+          <span class="contactForm__tag tag tag--require">必須</span>
+        </label>
+
+        <input class="contactForm__input" id="name" type="text" name="name" placeholder="猫野三毛蔵" required>
+
+        <div class="contactForm__warning" role="alert">お名前を記入してください。</div>
+
+        <div class="contactForm__note">※ニックネームなどでも結構です。</div>
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="email">
+          返信用メールアドレス
+
+          <span class="contactForm__tag tag tag--require">必須</span>
+        </label>
+
+        <input class="contactForm__input" id="email" type="email" name="email" placeholder="mikezou@sample.jp" required>
+
+        <div class="contactForm__warning" role="alert">返信用メールアドレス正しい形式で記入してください。</div>
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__btnWrapper">
+        <button class="contactForm__nextBtn nextBtn" type="submit">入力内容を確認する</button>
+      </div><!-- /.contactForm__btnWrapper -->
+
+    </form>
+
+  </div><!-- /.l-sm-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

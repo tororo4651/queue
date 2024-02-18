@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', { pageTitle: 'よくあるご質問　FAQ', description: "ハンドメイド猫グッズのお店 l'atelier Queue のよくある質問ページです。" }) %>
+
+
+<body class="faq">
+
+<%- include('../components/common/_header') %>
+
+
+<%- include('../components/common/_gnav') %>
+
+
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list l-container">
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">ホーム</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <span aria-current="page">よくあるご質問</span>
+    </li>
+  </ol>
+</nav>
+
+
+<main class="main main--faq">
+  <div class="l-container">
+
+    <h1 class="lv1Heading">
+      よくあるご質問
+      <span class="lv1Heading__en">FAQ</span>
+    </h1>
+
+
+    <p class="main__lead">
+      お客様から寄せられたよくあるご質問をあつめました。<br>
+      ご一読いただいても問題が解決しない場合は<a class="main__leadLink" href="/contact/">お問合せフォーム</a>からご連絡下さい。
+    </p>
+
+
+    <dl class="main--faq__accordion faqAccordion">
+      <dt class="faqAccordion__question">
+        <button class="faqAccordion__questionBtn"
+          id="question1"
+          aria-controls="answer1"
+          aria-expanded="false">
+          <span class="faqAccordion__questionIcon">Q</span>
+
+          <span class="faqAccordion__questionText">質問テキストが入ります</span>
+
+          <span class="faqAccordion__questionToggle"></span>
+
+          <span class="u-sr-only">回答1を開く</span>
+        </button>
+      </dt>
+
+      <dd class="faqAccordion__answer"
+        id="answer1"
+        aria-labelledby="question1"
+        aria-hidden="true">
+
+        <div class="faqAccordion__answerInner">
+          <span class="faqAccordion__answerIcon">A</span>
+
+          <span class="faqAccordion__answerText">回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。</span>
+        </div><!-- /.faqAccordion__answerInner -->
+
+      </dd>
+
+
+      <dt class="faqAccordion__question">
+        <button class="faqAccordion__questionBtn"
+          id="question2"
+          aria-controls="answer2"
+          aria-expanded="false">
+          <span class="faqAccordion__questionIcon">Q</span>
+
+          <span class="faqAccordion__questionText">質問テキストが入ります質問テキストが入ります</span>
+
+          <span class="faqAccordion__questionToggle"></span>
+
+          <span class="u-sr-only">回答2を開く</span>
+        </button>
+      </dt>
+
+      <dd class="faqAccordion__answer"
+        id="answer2"
+        aria-labelledby="question2"
+        aria-hidden="true">
+
+        <div class="faqAccordion__answerInner">
+          <span class="faqAccordion__answerIcon">A</span>
+
+          <span class="faqAccordion__answerText">回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。</span>
+        </div><!-- /.faqAccordion__answerInner -->
+      </dd>
+
+
+      <dt class="faqAccordion__question">
+        <button class="faqAccordion__questionBtn"
+          id="question3"
+          aria-controls="answer3"
+          aria-expanded="false">
+          <span class="faqAccordion__questionIcon">Q</span>
+
+          <span class="faqAccordion__questionText">質問テキストが入ります質問テキストが入ります</span>
+
+          <span class="faqAccordion__questionToggle"></span>
+
+          <span class="u-sr-only">回答4を開く</span>
+        </button>
+      </dt>
+
+      <dd class="faqAccordion__answer"
+        id="answer3"
+        aria-labelledby="question3"
+        aria-hidden="true">
+
+        <div class="faqAccordion__answerInner">
+          <span class="faqAccordion__answerIcon">A</span>
+
+          <span class="faqAccordion__answerText">回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。</span>
+        </div><!-- /.faqAccordion__answerInner -->
+      </dd>
+
+
+      <dt class="faqAccordion__question">
+        <button class="faqAccordion__questionBtn"
+          id="question4"
+          aria-controls="answer4"
+          aria-expanded="false">
+          <span class="faqAccordion__questionIcon">Q</span>
+
+          <span class="faqAccordion__questionText">質問テキストが入ります質問テキストが入ります</span>
+
+          <span class="faqAccordion__questionToggle"></span>
+
+          <span class="u-sr-only">回答4を開く</span>
+        </button>
+      </dt>
+
+      <dd class="faqAccordion__answer"
+        id="answer4"
+        aria-labelledby="question4"
+        aria-hidden="true">
+
+        <div class="faqAccordion__answerInner">
+          <span class="faqAccordion__answerIcon">A</span>
+
+          <span class="faqAccordion__answerText">回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。</span>
+        </div><!-- /.faqAccordion__answerInner -->
+      </dd>
+    </dl>
+
+
+  </div><!-- /.l-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', { pageTitle: '商品一覧　Products', description: "ハンドメイド猫グッズのお店 l'atelier Queue の商品一覧ページです。" }) %>
+
+
+<body class="products">
+
+<%- include('../components/common/_header') %>
+
+
+<%- include('../components/common/_gnav') %>
+
+
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list l-container">
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">ホーム</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <span aria-current="page">商品一覧</span>
+    </li>
+  </ol>
+</nav>
+
+
+<main class="main main--products">
+  <div class="l-container">
+
+    <h1 class="lv1Heading">
+      商品一覧
+      <span class="lv1Heading__en">Products</span>
+    </h1>
+
+
+    <nav class="main__nav primaryNav" aria-label="商品カテゴリ">
+      <ul class="primaryNav__list">
+        <li class="primaryNav__item">
+          <a class="primaryNav__link" href="./all.html" aria-current="page">すべて</a>
+        </li>
+
+        <li class="primaryNav__item">
+          <a class="primaryNav__link" href="./brooches.html">レンジブローチ</a>
+        </li>
+
+        <li class="primaryNav__item">
+          <a class="primaryNav__link" href="./collars.html">猫用首輪</a>
+        </li>
+
+        <li class="primaryNav__item">
+          <a class="primaryNav__link" href="./kerigurumi.html">けりぐるみ</a>
+        </li>
+
+        <li class="primaryNav__item">
+          <a class="primaryNav__link" href="./accessories.html">アクセサリー</a>
+        </li>
+
+        <li class="primaryNav__item">
+          <a class="primaryNav__link" href="./other.html">その他雑貨</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <div class="main--products__cards primaryGrid primaryGrid--largeGap">
+      <section class="productCard">
+        <h3 class="productCard__heading">【焼印付】爪とぎ型キーホルダー</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd001.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">可愛らしいミニチュアサイズの「猫の爪とぎ」型キーホルダー。木製ケースの裏面には猫シルエットの焼印付きでオシャレ！</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="./products/detail.html">詳細を見る</a>
+
+        <div class="productCard__ribbon">新商品</div>
+      </section><!-- /.topSection02__card.productCard -->
+
+      <section class="productCard">
+        <h3 class="productCard__heading">肉球ブローチ（7個セット）</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd002.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">定番の肉球型のレジンブローチ（7個セット）です。</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+      </section><!-- /.topSection02__card.productCard -->
+
+      <section class="productCard">
+        <h3 class="productCard__heading">レース猫首輪（鈴付き）</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd003.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+      </section><!-- /.topSection02__card.productCard -->
+
+      <section class="productCard">
+        <h3 class="productCard__heading">レジンブローチ（三毛）</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd004.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">商品概要説明テキストが入ります。最大60文字まで入ります。商品概要説明テキストが入ります。最大60文字まで入ります。</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+      </section><!-- /.topSection02__card.productCard -->
+
+      <section class="productCard">
+        <h3 class="productCard__heading">ドット柄猫用首輪（鈴なし）</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd005.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">商品概要説明テキストが入ります。最大60文字まで入ります。商品概要説明テキストが入ります。最大60文字まで入ります。</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+      </section><!-- /.topSection02__card.productCard -->
+
+      <section class="productCard">
+        <h3 class="productCard__heading">けりぐるみ（青ねこ）</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd006.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">商品概要説明テキストが入ります。最大60文字まで入ります。商品概要説明テキストが入ります。最大60文字まで入ります。</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+      </section><!-- /.topSection02__card.productCard -->
+
+      <section class="productCard">
+        <h3 class="productCard__heading">猫リバーシ（茶白）</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd007.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">商品概要説明テキストが入ります。最大60文字まで入ります。商品概要説明テキストが入ります。最大60文字まで入ります。</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+      </section><!-- /.topSection02__card.productCard -->
+
+      <section class="productCard">
+        <h3 class="productCard__heading">猫リバーシ（黒白）</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd008.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">商品概要説明テキストが入ります。最大60文字まで入ります。商品概要説明テキストが入ります。最大60文字まで入ります。</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+      </section><!-- /.topSection02__card.productCard -->
+
+      <section class="productCard">
+        <h3 class="productCard__heading">2連猫ペンダント</h3>
+
+        <figure class="productCard__figure">
+          <img class="productCard__image" src="/src/images/products/pd009.jpg" alt="" width="636" height="380">
+        </figure>
+
+        <p class="productCard__text">商品概要説明テキストが入ります。最大60文字まで入ります。商品概要説明テキストが入ります。最大60文字まで入ります。</p>
+
+        <div class="productCard__price">
+          000円<span class="productCard__priceText">(税抜)</span>
+        </div>
+
+        <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+      </section><!-- /.topSection02__card.productCard -->
+    </div><!-- /.main--products__cards -->
+
+
+    <nav class="main--products__pagination pagination01" role="navigation">
+      <ol class="pagination01__list">
+        <li class="pagination01__item">
+          <a class="pagination01__prev" href="">前へ</a>
+        </li>
+
+        <li class="pagination01__item">
+          <span class="pagination01__current" href="" aria-current="page">1</span>
+        </li>
+
+        <li class="pagination01__item">
+          <a class="pagination01__number" href="">2</a>
+        </li>
+
+        <li class="pagination01__item">
+          <a class="pagination01__number" href="">3</a>
+        </li>
+
+        <li class="pagination01__item">
+          <span class="pagination01__dots" href="">…</span>
+        </li>
+
+        <li class="pagination01__item">
+          <a class="pagination01__number" href="">7</a>
+        </li>
+
+        <li class="pagination01__item">
+          <a class="pagination01__next" href="">次へ</a>
+        </li>
+      </ol>
+    </nav>
+
+  </div><!-- /.l-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

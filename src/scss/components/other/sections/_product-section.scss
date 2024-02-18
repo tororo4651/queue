@@ -1,0 +1,84 @@
+// セクション・商品ページ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+
+.productSection {
+  display: grid;
+  row-gap: 30px;
+
+  // 商品情報
+  &__info {
+    order: 1;
+    border: solid 1px g.$x-baseColor;
+    padding: 20px;
+
+    &Text {
+      margin-block-start: 10px;
+    }
+  }
+
+
+  // 写真
+  &__figure {
+
+    // &:not(:first-of-type) {
+    //   display: none;
+    // }
+  }
+
+  &__thumbnails {
+    margin-block-start: 5px;
+    display: flex;
+  }
+
+  &__thumbnail {
+    width: 20%;
+    border: solid 5px transparent;
+    transition: border-color .3s;
+
+    &--current {
+      border-color: g.$x-baseColor;
+    }
+
+    &Image {
+      // border: solid 5px transparent;
+      transition: opacity .3s;
+
+      // &[aria-selected="true"] {
+      //   border-color: g.$x-baseColor;
+      // }
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+
+  @include g.mq() {
+    grid-template-columns:
+      repeat(2, 1fr);
+    grid-template-rows:
+      repeat(2, auto);
+    gap: 15px 20px;
+
+    &__photo {
+      grid-row: 1 / -1;
+    }
+
+    &__thumbnails {
+      margin-top: 12px;
+      margin-inline: -5px;
+    }
+
+    &__thumbnail {
+      width: calc((100% - 10px * 4) / 5);
+      margin-inline: 5px;
+    }
+  }
+
+}

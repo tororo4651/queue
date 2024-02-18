@@ -1,0 +1,72 @@
+// メディア・ショップ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+.shopMedia {
+  display: flex;
+  flex-direction: column-reverse;
+
+  &__body {
+    margin-top: 20px;
+  }
+
+  &__heading {
+    padding: 10px;
+    background-color: g.$mainColor;
+    color: g.$whiteColor;
+  }
+
+  &__list {
+    margin-top: 20px;
+    @include g.fz(14);
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+
+    &Title {
+      width: 6em;
+      font-weight: bold;
+
+      &:not(:first-of-type) {
+        margin-top: 10px;
+      }
+    }
+
+    &Desc {
+      width: calc(100% - 6em);
+      word-break: break-all;
+      // overflow-wrap: break-word;
+
+      &:not(:first-of-type) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+
+  @include g.mq(md-min) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    &__body {
+      margin-top: 0;
+      width: calc(624 / 1084 * 100%);
+    }
+
+    &__figure {
+      width: calc(440 / 1084 * 100%);
+    }
+
+    &__heading {
+      padding: 8px 20px;
+      @include g.fz(20);
+    }
+
+    &__list {
+      @include g.fz(16);
+    }
+  }
+}

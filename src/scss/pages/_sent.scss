@@ -1,0 +1,50 @@
+// ページ・送信完了
+
+
+// 変数、ミックスイン、関数
+@use "../global/" as g;
+
+
+.sent {
+
+  &__content {
+    margin-top: 40px;
+    margin-inline: calc(50% - (50vw - 7.5px));
+    padding: 60px 20px;
+    background-color: g.$baseColor;
+
+    &Title {
+      @include g.fz(24);
+      font-weight: bold;
+      line-height: 1.5;
+      text-align: center;
+
+      + * {
+        margin-top: 40px;
+
+        + * {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  &__topBtn {
+    margin-top: 80px;
+  }
+
+
+  @include g.mq {
+
+    &__content {
+      margin-top: 60px;
+      margin-inline: 0;
+      padding: 60px 40px;
+    }
+
+    &__topBtn {
+      margin-top: 100px;
+      margin-inline: auto;
+    }
+  }
+}

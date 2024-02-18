@@ -1,0 +1,188 @@
+// パーツ・ボタン
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+
+// 小
+.sm-btn {
+  display: inline-block;
+  padding-inline: 1.5em;
+  border-radius: 6px;
+  background: g.$mainColor;
+  color: g.$whiteColor;
+  @include g.fz(13);
+  font-weight: bold;
+  text-decoration-line: none;
+  transition: all .3s;
+
+  @include g.hover-focus {
+    background-color: g.$x-baseColor;
+    color: g.$baseColor;
+  }
+
+
+  @include g.mq {
+    @include g.fz(16);
+  }
+}
+
+
+
+
+// More
+.moreBtn {
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 6px;
+  color: g.$mainColor;
+  @include g.fz(14);
+  font-weight: bold;
+  text-decoration-line: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    margin-inline-start: 3.5px;
+    rotate: 45deg;
+  }
+
+  &:hover {
+    border-color: g.$xx-baseColor;
+    background-color: g.$baseColor;
+    color: g.$mainColor;
+  }
+}
+
+
+
+
+// ページのトップに戻る
+.pageTopBtn {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: g.$mainColor;
+  color: g.$whiteColor;
+  border-radius: 50%;
+  text-decoration-line: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: g.$x-baseColor;
+    color: g.$whiteColor;
+  }
+
+  &__image {
+    width: 25px;
+    height: 18px;
+  }
+
+  &__text {
+    @include g.fz(10);
+    text-transform: uppercase;
+  }
+
+
+  @include g.mq {
+    width: 80px;
+    height: 80px;
+
+    &__image {
+      width: 34px;
+      height: 24px;
+    }
+
+    &__text {
+      @include g.fz(14);
+    }
+  }
+}
+
+
+
+
+// 次・前
+.nextBtn,
+.prevBtn {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 6px;
+  @include g.fz(20);
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s;
+
+
+  @include g.mq {
+
+    &--center {
+      margin-inline: auto;
+    }
+  }
+}
+
+.nextBtn {
+  border: solid 1px g.$x-baseColor;
+  background-color: g.$x-baseColor;
+  color: g.$whiteColor;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: .57em;
+    height: .57em;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    margin-left: .2em;
+    rotate: 45deg;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: .7;
+  }
+}
+
+.prevBtn {
+  border: solid 1px;
+  background-color: g.$whiteColor;
+  color: g.$mainColor;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: .57em;
+    height: .57em;
+    border-left: solid 2px;
+    border-bottom: solid 2px;
+    margin-right: .2em;
+    rotate: 45deg;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: g.$x-baseColor;
+    background-color: g.$baseColor;
+    color: g.$mainColor;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', { pageTitle: 'ページが見つかりません　404 NOT FOUND', description: "ハンドメイド猫グッズのお店 l'atelier Queue のお問い合わせページです。" }) %>
+
+
+<body class="notFound">
+
+<%- include('../components/common/_header') %>
+
+
+<%- include('../components/common/_gnav') %>
+
+
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list l-container">
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">ホーム</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <span aria-current="page">ページが見つかりませんせ</span>
+    </li>
+  </ol>
+</nav>
+
+
+<main class="main">
+  <div class="l-sm-container">
+
+    <h1 class="lv1Heading">
+      ページが見つかりません
+
+      <span class="lv1Heading__en">404 NOT FOUND</span>
+    </h1>
+
+    <div class="notFound__content">
+      <p class="notFound__contentText">
+        お探しのページが見つかりません。<br>
+        一時的にアクセスできない状態にあるか、移動もしくは削除された可能性があります。
+      </p>
+
+      <p class="notFound__contentText">お手数ですがURLをご確認の上、トップページ・上記メニューなどからお探しください。</p>
+    </div><!-- /.notFound__content -->
+
+    <a class="notFound__topBtn prevBtn prevBtn--center" href="/">トップページへ戻る</a>
+
+  </div><!-- /.l-sm-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

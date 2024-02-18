@@ -1,0 +1,59 @@
+// ヒーローイメージ・プライマリ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.primaryHero {
+  height: calc(200 / 375 * 100vw);
+  // aspect-ratio: 375 / 200;
+  padding-inline: 20px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--service {
+    background-image: url(@images/service/bg_header_service.jpg);
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &En {
+      font-family: 'Oswald', sans-serif;
+      @include g.fz(20);
+      text-transform: uppercase;
+      color: g.$mainColor;
+      letter-spacing: 0.2em;
+    }
+
+    &Ja {
+      @include g.fz(30);
+      letter-spacing: 0.2em;
+    }
+  }
+
+
+  @include g.mq() {
+    height: 460px;
+    padding-inline: 50px;
+    justify-content: flex-start;
+
+    &__heading {
+      align-items: flex-start;
+
+      &En {
+        @include g.fz(24);
+      }
+
+      &Ja {
+        @include g.fz(48);
+      }
+    }
+  }
+}

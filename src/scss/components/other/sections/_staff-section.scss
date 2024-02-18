@@ -1,0 +1,92 @@
+// セクション・ねこ店員紹介
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.staffSection {
+  display: flex;
+  flex-direction: column-reverse;
+
+  &__body {
+    margin-inline-start: -20px;
+    padding: 30px 20px 50px;
+    background-color: g.$baseColor;
+  }
+
+  &__heading {
+    border-bottom: dashed 1px;
+    padding-block-end: 5px;
+    @include g.fz(22);
+  }
+
+  &__text {
+    margin-block-start: 20px;
+  }
+
+  &__figure {
+    width: 100%;
+    margin-inline: calc(50% - 50vw);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  // 逆
+  &--reverse {
+
+    .staffSection__body {
+      margin-inline: 0 calc(50% - 50vw);
+    }
+  }
+
+
+  @include g.mq {
+    flex-direction: row;
+    align-items: center;
+    background-color: g.$baseColor;
+
+    &__body {
+      flex-shrink: 0;
+      width: 50%;
+      padding: 40px;
+      margin-inline: 0;
+    }
+
+    &__figure {
+      margin-inline: 0 calc(50% - 50vw);
+      transform: translateY(-50px);
+    }
+
+    // 逆
+    &--reverse {
+      flex-direction: row-reverse;
+
+      .staffSection__body {
+        margin-inline: 0;
+      }
+
+      .staffSection__figure {
+        margin-inline: calc(50% - 50vw) 0;
+      }
+    }
+  }
+
+
+  @include g.mq('lg-min') {
+
+    &__heading {
+      padding-block-end: 10px;
+      @include g.fz(30);
+    }
+
+    &__text {
+      margin-block-start: 40px;
+      @include g.fz(20);
+      line-height: 2;
+    }
+  }
+
+}

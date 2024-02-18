@@ -1,0 +1,51 @@
+// Utilityクラス・ユーティリティクラス・汎用クラス・ヘルパークラス
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+
+// 行揃え
+
+// 左揃え
+.u-text-left {
+  text-align-last: left;
+}
+
+// 右揃え
+.u-text-right {
+  text-align: right;
+}
+
+// 中央揃え
+.u-text-center {
+  text-align: center;
+}
+
+
+
+
+// スクリーンリーダーのみ
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+
+
+
+// パソコンのみ
+.u-pc-only {
+  display: none;
+
+  @include g.mq {
+    display: block;
+  }
+}

@@ -1,0 +1,253 @@
+// 共通・グローバルナビゲーション
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+
+// スマートフォン用
+
+// 開閉ボタン
+.gNavBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  border-style: none;
+  border-radius: 50%;
+  background-color: g.$mainColor;
+  color: g.$whiteColor;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .3s;
+
+  @include g.hover-focus() {
+    background-color: g.$x-baseColor;
+  }
+
+  &__text {
+    @include g.fz(12);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__line {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    margin-block: 15px 12px;
+    background-color: g.$whiteColor;
+
+    [aria-expanded="true"] & {
+      background-color: transparent;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: g.$whiteColor;
+      transition: rotate .3s;
+    }
+
+    &::before {
+      translate: 0 -9px;
+
+      [aria-expanded="true"] & {
+        translate: 0;
+        rotate: 45deg;
+      }
+    }
+
+    &::after {
+      translate: 0 9px;
+
+      [aria-expanded="true"] & {
+        translate: 0;
+        rotate: -45deg;
+      }
+    }
+  }
+
+
+  @include g.mq {
+    display: none;
+  }
+}
+
+
+
+
+// スマートフォン用メインメニュー
+.sp-gNav {
+  text-align: center;
+
+
+  // オーバーレイ
+  &--overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    padding-block: 28px;
+    background-color: g.$baseColor;
+    color: g.$mainColor;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    // pointer-events: none;
+  }
+
+
+  // フッター
+  &--footer {
+    color: g.$whiteColor;
+  }
+
+
+  &__list01  {
+    margin-block-start: 34px;
+
+    &Item {
+      border-top: dashed 1px;
+
+      &:last-child {
+        border-bottom: dashed 1px;
+      }
+    }
+
+    &Link {
+      display: block;
+      padding: 10px;
+      color: inherit;
+      @include g.fz(14);
+      font-weight: bold;
+      text-decoration-line: none;
+    }
+  }
+
+
+  &__list02 {
+    margin-block-start: 45px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+
+    &Item {
+
+      &:not(:first-child) {
+        border-left: solid 1px;
+      }
+    }
+
+    &Link {
+      display: block;
+      padding-inline: 10px;
+      color: inherit;
+      @include g.fz(12);
+      text-decoration-line: none;
+    }
+  }
+
+
+  @include g.mq() {
+
+    &--overlay {
+      display: none;
+    }
+
+    &__list01 {
+      margin-block-start: 20px;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+
+      &Item {
+        border-top: none;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:not(:first-child) {
+          border-left: solid 1px;
+        }
+      }
+
+      &Link {
+        padding: 0 10px;
+        @include g.fz(12);
+        font-weight: normal;
+      }
+    }
+
+    &__list02 {
+      margin-block-start: 15px;
+    }
+  }
+
+}
+
+
+
+
+// パソコン用メインメニュー
+.pc-gNav {
+  padding-block: 1em;
+  background-color: g.$baseColor;
+  font-size: min(20px, 20 / 1084 * 100vw);
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-inline: calc(25 / 20 * 1em);
+  }
+
+  &__link {
+    text-decoration-line: none;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: calc(28 / 20 * 1em);
+      height: calc(28 / 20 * 1em);
+      margin-inline-end: calc(6 / 20 * 1em);
+      background-image: url(/src/images/common/ico_paw.svg);
+      background-size: cover;
+    }
+
+    .products &--products,
+    .blogTop &--blog,
+    .blog &--blog,
+    .staff &--staff,
+    .faq &--faq,
+    .contact &--contact,
+    &[aria-current],
+    &:hover,
+    &:active {
+      color: g.$xx-baseColor;
+      font-weight: bold;
+
+      &::before {
+        background-image: url(/src/images/common/ico_paw_o.svg);
+      }
+    }
+  }
+
+
+  @include g.mq('md-max') {
+    display: none;
+  }
+}

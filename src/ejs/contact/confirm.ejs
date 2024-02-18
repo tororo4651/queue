@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', { pageTitle: '入力内容の確認　CONTACT', description: "ハンドメイド猫グッズのお店 l'atelier Queue のお問い合わせページです。" }) %>
+
+
+<body class="contact">
+
+<%- include('../components/common/_header') %>
+
+
+<%- include('../components/common/_gnav') %>
+
+
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list l-container">
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">ホーム</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <span aria-current="page">お問い合わせ</span>
+    </li>
+  </ol>
+</nav>
+
+
+<main class="main">
+  <div class="l-sm-container">
+
+    <h1 class="lv1Heading">
+      入力内容の確認
+      <span class="lv1Heading__en">CONTACT</span>
+    </h1>
+
+    <p class="main__lead">以下の内容でよろしければ送信ボタンを押して下さい。</p>
+
+
+    <form class="contactForm" action="#" method="POST">
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="type">
+          お問い合せ種類
+
+          <span class="contactForm__tag tag tag--require">必須</span>
+        </label>
+
+        <div class="contactForm__text">
+          商品について
+        </div>
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="content">
+          お問い合わせ内容
+
+          <span class="contactForm__tag tag tag--require">必須</span>
+        </label>
+
+        <div class="contactForm__text">
+          お問い合わせ内容テキストが入ります。お問い合わせ内容テキストが入ります。お問い合わせ内容テキストが入ります。お問い合わせ内容テキストが入ります。お問い合わせ内容テキストが入ります。
+        </div>
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="name">
+          お名前
+
+          <span class="contactForm__tag tag tag--require">必須</span>
+        </label>
+
+        <div class="contactForm__text">
+          猫野三毛蔵
+        </div>
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="email">
+          返信用メールアドレス
+
+          <span class="contactForm__tag tag tag--require">必須</span>
+        </label>
+
+        <div class="contactForm__text">
+          mikezou@sample.jp
+        </div>
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__btnWrapper">
+        <a class="contactForm__prevBtn prevBtn" href="./index.html">修正する</a>
+
+        <button class="contactForm__nextBtn nextBtn">送信する</button>
+      </div><!-- /.contactForm__btnWrapper -->
+
+    </form>
+
+  </div><!-- /.l-sm-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+// アコーディオン・FAQ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.faqAccordion {
+
+  &__question {
+
+    &:not(:first-of-type) {
+      margin-block-start: 20px;
+    }
+
+    &Btn {
+      padding: 15px 10px;
+      background-color: g.$baseColor;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &Icon {
+      flex-shrink: 0;
+      color: g.$x-baseColor;
+      @include g.fz(30);
+      line-height: 1;
+    }
+
+    &Text {
+      margin-inline: 15px;
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    &Toggle {
+      flex-shrink: 0;
+      margin-inline-start: auto;
+      width: 20px;
+      height: 20px;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      align-items: center;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        grid-column: 1;
+        grid-row: 1;
+        content: "";
+        border-top: solid 1px;
+      }
+
+      &::after {
+        rotate: 90deg;
+        transition: rotate .3s;
+
+        .is-answerOpen & {
+          rotate: 0deg;
+        }
+      }
+    }
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+
+    // &.is-answerOpen {
+    //   max-height: 1000px;
+    // }
+
+    &Inner {
+      padding: 20px 20px 20px 10px;
+      display: flex;
+    }
+
+    &Icon {
+      flex-shrink: 0;
+      @include g.fz(30);
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    &Text {
+      margin-inline-start: 15px;
+    }
+  }
+
+
+  @include g.mq() {
+
+    &__question {
+
+      &Btn {
+        padding: 15px;
+      }
+
+      &Icon {
+        @include g.fz(40);
+      }
+
+      &Text {
+        margin-inline: 20px;
+        @include g.fz(18);
+      }
+
+      &Toggle {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__answer {
+
+      &Inner {
+        padding: 20px 20px 20px 15px;
+      }
+
+      &Icon {
+        @include g.fz(40);
+      }
+
+      &Text {
+        margin-inline-start: 20px;
+      }
+    }
+  }
+
+}

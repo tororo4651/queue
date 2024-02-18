@@ -1,0 +1,67 @@
+// ヘッダー・トップページ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.topHeader {
+  border-bottom:
+    solid
+    min(30px, 30 / 375 * 100vw)
+    g.$baseColor;
+
+  &__inner {
+    padding-block: 10px 30px;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__text {
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    padding-block: 30px;
+    font-size: min(20px, 16 / 375 * 100vw);
+    line-height: 1.8;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: min(200px, calc(200 / 375 * 100vw));
+    background-image: url(../images/common/bg_top_header_sp.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  @include g.mq {
+    border-bottom: none;
+
+    &__inner {
+      padding-block: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__heading {
+      width: calc(424 / 1084 * 100%);
+    }
+
+    &__text {
+      width: calc(624 / 1084 * 100%);
+      padding: 30px 55px;
+      font-size: min(20px, 20 / 1084 * 100vw);
+    }
+
+    &::after {
+      background-image: url(/src/images/common/bg_top_header.jpg);
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+    }
+  }
+}

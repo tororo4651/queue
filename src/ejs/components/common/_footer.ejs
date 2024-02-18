@@ -1,0 +1,64 @@
+<%
+  if (typeof src === 'undefined') {
+    src = '';
+  }
+%>
+
+<footer class="footer">
+
+  <a class="footer__pageTopBtn pageTopBtn" href="#top">
+    <img class="pageTopBtn__image" src="<%= src %>images/common/ico_paw03.svg" alt="" width="60" height="48">
+    <span class="pageTopBtn__text">Page Top</span>
+  </a>
+
+
+  <nav class="sp-gNav sp-gNav--footer">
+    <div class="sp-gNav__inner l-container">
+
+      <img class="sp-gNav__logo" src="/src/images/common/logo_small_wh.svg" alt="l'atelier Queue" width="76" height="103" loading="lazy">
+
+      <ul class="sp-gNav__list01">
+        <li class="sp-gNav__list01Item">
+          <a class="sp-gNav__list01Link" href="/">トップページ</a>
+        </li>
+
+        <li class="sp-gNav__list01Item">
+          <a class="sp-gNav__list01Link" href="/products/">商品一覧</a>
+        </li>
+
+        <li class="sp-gNav__list01Item">
+          <a class="sp-gNav__list01Link" href="/blog/">ねこブログ</a>
+        </li>
+
+        <li class="sp-gNav__list01Item">
+          <a class="sp-gNav__list01Link" href="/staff/">ねこ店員紹介</a>
+        </li>
+
+        <li class="sp-gNav__list01Item">
+          <a class="sp-gNav__list01Link" href="/faq/">よくあるご質問</a>
+        </li>
+
+        <li class="sp-gNav__list01Item">
+          <a class="sp-gNav__list01Link" href="/contact/">お問い合わせ</a>
+        </li>
+      </ul>
+
+      <ul class="sp-gNav__list02">
+        <li class="sp-gNav__list02Item">
+          <a class="sp-gNav__list02Link" href="/law/">特定商取引法に関する表記</a>
+        </li>
+
+        <li class="sp-gNav__list02Item">
+          <a class="sp-gNav__list02Link" href="/privacy/">プライバシーポリシー</a>
+        </li>
+      </ul>
+
+    </div><!-- /.sp-gNav__inner.l-container -->
+  </nav><!-- /.sp-gNav -->
+
+
+  <div class="footer__copyright">
+    <small class="footer__copyrightText" lang="en">&copy; l’atelier Queue All Rights Reserved. 2021</small>
+  </div><!-- /.footer__copyright -->
+
+</footer>

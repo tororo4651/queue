@@ -1,0 +1,57 @@
+// ナビゲーション・プライマリ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.primaryNav {
+
+  &__list {
+    display: grid;
+    grid-template-columns:
+      repeat(auto-fit, minmax(159.5px, 1fr));
+    gap: 1px;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px;
+    background-color: g.$baseColor;
+    @include g.fz(14);
+    line-height: 1.2;
+    text-decoration-line: none;
+    text-align: center;
+
+    &[aria-current] {
+      background-color: g.$x-baseColor;
+      color: g.$whiteColor;
+      font-weight: bold;
+    }
+  }
+
+
+  @include g.mq {
+
+    &__list {
+      border-bottom: solid 5px g.$x-baseColor;
+      display: flex;
+      gap: normal;
+    }
+
+    &__item {
+      width: calc(100% / 6);
+
+      &:not(:first-child) {
+        margin-inline-start: 3px;
+      }
+    }
+
+    &__link {
+      height: 100%;
+      padding: 20px 5px 15px;
+      border-radius: 6px 6px 0 0;
+      @include g.fz(16);
+    }
+  }
+}

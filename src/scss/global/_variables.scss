@@ -1,0 +1,56 @@
+// 変数
+
+
+// 可
+  // -（ ハイフン ）
+  // _（ アンダースコア・アンダーバー ）
+  // マルチバイト文字（ 日本語 ）
+
+
+// 不可
+  // 数字を先頭にできない。
+  // 連続した -（ ハイフン ）から始まっている名前。
+
+
+
+// カラー
+$mainColor: #341E12;
+$baseColor: #F5EFD7;
+$x-baseColor: #CEB967;
+$xx-baseColor: #A88E25;
+$accentColor: #F7320E;
+$blackColor: #000000;
+$whiteColor: #ffffff;
+$grayColor1: #DDDDDD;
+$grayColor2: #707070;
+
+
+
+// 幅
+
+
+
+// サイズ
+
+
+
+// フォント
+$sans: 'Noto Sans JP', sans-serif;
+
+
+
+// ブレイクポイント
+$breakpoints: (
+  'xs-min': '(min-width: 375px)',
+  'xs-max': '(max-width: 374px)',
+  'sm-min': '(min-width: 576px)',
+  'sm-max': '(max-width: 575px)',
+  'md-min': '(min-width: 768px), print',
+  'md-max': '(max-width: 767px)',
+  'lg-min': '(min-width: 992px)',
+  'lg-max': '(max-width: 991px)',
+  'xl-min': '(min-width: 1200px)',
+  'xl-max': '(max-width: 1199px)',
+  'xxl-min': '(min-width: 1366px)',
+  'xxl-max': '(max-width: 1365px)'
+);

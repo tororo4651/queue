@@ -1,0 +1,26 @@
+// レイアウト・CSSグリッド
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+// プライマリ
+.primaryGrid {
+  max-width: 400px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(224.3px, 1fr));
+  gap: 20px;
+
+
+  @include g.mq('sm-min') {
+    max-width: none;
+
+    &--largeGap {
+      gap: 40px 20px;
+    }
+  }
+}

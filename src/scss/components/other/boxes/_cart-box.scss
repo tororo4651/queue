@@ -1,0 +1,217 @@
+// メインコンテンツ・商品ページ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+
+.cartBox {
+
+  &__heading {
+    border-bottom: dashed 1px;
+    padding-block-end: 10px;
+    @include g.fz(22);
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__id {
+    margin-block-start: 10px;
+  }
+
+  &__price {
+    @include g.fz(20);
+    font-weight: bold;
+
+    &Num {
+      color: g.$accentColor;
+      @include g.fz(28);
+    }
+
+    &Tax {
+      @include g.fz(16);
+      font-weight: normal;
+    }
+  }
+
+  &__typeWrapper {
+    margin-block-start: 30px;
+  }
+
+  &__type {
+    display: grid;
+    grid-template-areas:
+      "figure text"
+      "figure btn";
+    grid-template-columns:
+      100px 1fr;
+    gap: 10px 20px;
+
+    &:not(:first-child) {
+      margin-block-start: 15px;
+    }
+
+    &Figure {
+      grid-area: figure;
+      width: 100px;
+      height: 100px;
+    }
+
+    &Image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &Text {
+      grid-area: text;
+      align-self: end;
+    }
+  }
+
+  &__btn {
+    grid-area: btn;
+    display: inline-block;
+    width: 100%;
+    max-width: 184px;
+    padding: 10px;
+    border: solid 1px transparent;
+    border-radius: 6px;
+    background-color: g.$x-baseColor;
+    color: g.$whiteColor;
+    @include g.fz(14);
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    text-decoration-line: none;
+    cursor: pointer;
+    transition: opacity .3s;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-inline-end: 5px;
+      background-image: url(../images/common/ico_cart.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      vertical-align: middle;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+
+
+  // 下部のカートボックス
+  &--bottom {
+    border: solid 1px g.$x-baseColor;
+    padding: 15px;
+  }
+
+  // 2カラム
+  &--2col {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .cartBox__body {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+
+    .cartBox__form {
+      margin-top: 20px;
+      display: flex;
+    }
+
+    .cartBox__btn {
+      margin-left: auto;
+    }
+
+    .cartBox__figure {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+    }
+
+    .cartBox__image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+  @media (min-width: 576px) and (max-width: 767px) {
+
+    &__type {
+      grid-template-areas:
+        "figure text btn";
+      grid-template-columns:
+        auto 1fr auto;
+      align-items: center;
+
+      &Text {
+        align-self: auto;
+      }
+    }
+  }
+
+
+  @include g.mq('md-min') {
+
+    &__heading {
+      padding-bottom: 20px;
+      @include g.fz(30);
+    }
+
+    &--bottom {
+      padding: 30px;
+
+      .cartBox__typeWrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .cartBox__type {
+        width: 46.875%;
+
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &--2col {
+
+      .cartBox__body {
+        margin-left: 30px;
+      }
+
+      .cartBox__figure {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+
+
+  @include g.mq('lg-min') {
+
+    &__type {
+      grid-template-areas:
+        "figure text btn";
+      grid-template-columns:
+        auto 1fr auto;
+      align-items: center;
+
+      &Text {
+        align-self: auto;
+      }
+    }
+  }
+}

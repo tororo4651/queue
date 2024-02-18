@@ -1,0 +1,54 @@
+// ヒーローイメージ・セカンダリ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.secondaryHero {
+  padding-block: 80px;
+  background-color: #EAF5E9;
+  text-align: center;
+
+  &__heading {
+
+    &En {
+      display: block;
+      color: g.$mainColor;
+      text-transform: uppercase;
+      font-family: Oswald, sans-serif;
+      @include g.fz(20);
+      font-weight: 500;
+      letter-spacing: .2em;
+    }
+
+    &Ja {
+      @include g.fz(36);
+      font-weight: bold;
+    }
+  }
+
+  &__lead {
+    margin-block-start: 40px;
+  }
+
+
+  @include g.mq('md-min') {
+    padding-block: 100px;
+
+    &__heading {
+
+      &En {
+        @include g.fz(24);
+      }
+
+      &Ja {
+        @include g.fz(48);
+      }
+    }
+
+    &__lead {
+      margin-block-start: 50px;
+    }
+  }
+}

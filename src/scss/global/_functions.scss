@@ -1,0 +1,40 @@
+// 関数
+
+
+// 変数
+@use "./variables/" as v;
+
+
+
+// rem
+@function rem($size, $root: 16) {
+  @return math.div($size, $root) * 1rem;
+}
+
+// 呼び出し
+// .test {
+//   margin: rem(24);
+// }
+
+
+
+
+// rem（フォントサイズ）
+@function fz($size, $root: 16) {
+  @return math.div($size, $root) * 1rem;
+}
+
+// 呼び出し
+// .test {
+//   font-size: fz(24);
+// }
+
+
+
+
+// 合計
+@function sum($num1: 5, $num2: 62) {
+  @return ($num1 + $num2) * 1px;
+  // @return calc(($num1 + $num2) * 1px);
+  // @return $num1 + $num2 + px;
+}

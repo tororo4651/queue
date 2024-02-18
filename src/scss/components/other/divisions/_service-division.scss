@@ -1,0 +1,30 @@
+// ディビジョン・事業内容（SERVICE）
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.serviceDivision {
+  padding-block: 50px;
+
+  &__catch {
+    @include g.fz(22);
+    line-height: 1.8;
+  }
+
+  &__lead {
+    margin-block-start: 30px;
+    line-height: 2;
+  }
+
+
+  @include g.mq {
+    padding-block: 80px;
+
+    &__catch {
+      @include g.fz(36);
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// ページ・ページが見つかりません
+
+
+// 変数、ミックスイン、関数
+@use "../global/" as g;
+
+
+.notFound {
+
+  &__content {
+    margin-top: 40px;
+    margin-inline: calc(50% - (50vw - 7.5px));
+    padding: 40px 20px;
+    background-color: g.$baseColor;
+
+    &Text {
+
+      &:not(:first-child) {
+        margin-top: 1.75em;
+      }
+    }
+  }
+
+  &__topBtn {
+    margin-top: 80px;
+  }
+
+
+  @include g.mq() {
+
+    &__content {
+      margin-inline: 0;
+      padding: 40px;
+    }
+
+    &__topBtn {
+      margin-top: 100px;
+    }
+  }
+
+ }

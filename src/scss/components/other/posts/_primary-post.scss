@@ -1,0 +1,214 @@
+// POST・プライマリ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+.primaryPost {
+  max-width: 800px;
+  margin-inline: auto;
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    border-bottom: dashed 1px;
+    @include g.fz(26);
+  }
+
+  &__info {
+    order: -1;
+  }
+
+  &__tag {
+    margin-inline-start: 30px;
+  }
+
+  &__intro {
+    margin-top: 30px;
+  }
+
+  &__eyeCatchImage {
+    width: 100%;
+  }
+
+  &__lead {
+    margin-top: 30px;
+  }
+
+  &__body {
+
+    > *:not(h2, h3, h4, h5, h6) {
+      margin-top: 1.75em;
+    }
+
+    h2 {
+      margin: 80px 0 25px;
+      padding-bottom: 5px;
+      border-bottom: solid 2px g.$x-baseColor;
+      @include g.fz(24);
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    h3 {
+      margin: 40px 0 20px;
+      border-left: solid 4px g.$x-baseColor;
+      padding-left: 20px;
+      @include g.fz(20);
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    h4 {
+      margin: 30px 0 15px;
+      @include g.fz(18);
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    h5 {
+      margin: 30px 0 10px;
+      @include g.fz(16);
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    h6 {
+      margin: 30px 0 10px;
+      color: #666;
+      @include g.fz(16);
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    ul {
+
+      > li {
+        margin-top: 1.5em;
+        padding-left: 1em;
+        text-indent: -1em;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          background-color: g.$x-baseColor;
+          border-radius: 50%;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    ol {
+      list-style-type: decimal;
+
+      > li {
+        margin-top: 1.5em;
+        margin-left: 1em;
+      }
+    }
+
+    table {
+      margin-top: 1.5em;
+      width: 100%;
+
+      th, td {
+        border: solid 1px g.$x-baseColor;
+        padding: 20px;
+        vertical-align: middle;
+      }
+
+      th {
+        background-color: g.$baseColor;
+      }
+    }
+
+    img {
+      display: block;
+      margin-inline: auto;
+    }
+
+    address {
+
+    }
+  }
+
+
+  @include g.mq {
+
+    &__heading {
+      @include g.fz(36);
+    }
+
+    &__intro {
+      margin-top: 40px;
+    }
+
+    &__lead {
+      margin-top: 40px;
+    }
+
+    &__body {
+
+      h2 {
+        margin: 100px 0 40px;
+        @include g.fz(30);
+      }
+
+      h3 {
+        margin: 50px 0 30px;
+        @include g.fz(24);
+      }
+
+      h4 {
+        margin: 40px 0 20px;
+        @include g.fz(20);
+      }
+
+      h5 {
+        margin: 30px 0 15px;
+        @include g.fz(18);
+      }
+
+      h6 {
+        margin: 30px 0 10px;
+        @include g.fz(16);
+      }
+
+      img {
+
+        &.floatLeft {
+          width: 380px;
+          margin-right: 20px;
+          margin-bottom: 10px;
+          float: left;
+        }
+
+        &.floatRight {
+          width: 380px;
+          margin-left: 20px;
+          margin-bottom: 10px;
+          float: right;
+        }
+
+        &.center {
+          width: 520px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+}

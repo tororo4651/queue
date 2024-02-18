@@ -1,0 +1,73 @@
+// ミックスイン
+
+
+// ビルトインモジュール
+@use "sass:map";
+@use "sass:math";
+@use "sass:string";
+@use "sass:color";
+
+
+
+// 変数
+@use "./_variables.scss" as v;
+
+
+
+// メディアクエリ
+@mixin mq($breakpoint: 'md-min') {
+  @media #{map.get(v.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-min($width: 768) {
+  @media (min-width: $width + 'px') {
+    @content;
+  }
+}
+
+@mixin mq-max($width: 767) {
+  @media (max-width: $width + px) {
+    @content;
+  }
+}
+
+
+
+
+// rem
+@mixin rem($size, $root: 16) {
+  margin: math.div($size, $root) * 1rem;
+  // font-size: math.div($size, $root) + rem;
+  // font-size: calc($size / $root * 1rem);
+  // font-size: calc($size / $root) + rem;
+}
+
+// 呼び出し
+// @include g.rem(24);
+
+
+
+
+// rem（フォントサイズ）
+@mixin fz($size, $root: 16) {
+  font-size: math.div($size, $root) * 1rem;
+  // font-size: math.div($size, $root) + rem;
+  // font-size: calc($size / $root * 1rem);
+  // font-size: calc($size / $root) + rem;
+}
+
+// 呼び出し
+// @include g.fz(24);
+
+
+
+
+// マスオーバー・フォーカス
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}

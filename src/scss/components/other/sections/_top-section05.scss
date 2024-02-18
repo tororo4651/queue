@@ -1,0 +1,51 @@
+// セクション・トップページ05
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+.topSection05 {
+  text-align: center;
+
+  &__image {
+    margin-top: 30px;
+    width: 140px;
+    height: 140px;
+  }
+
+  &__account {
+    margin-block-start: 20px;
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-block-start: 20px;
+  }
+
+  &__sns {
+    margin-block-start: 40px;
+    display: flex;
+    justify-content: center;
+
+    &Item {
+
+      &:not(:first-child) {
+        margin-inline-start: 40px;
+      }
+    }
+
+    &Image {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+
+  @include g.mq() {
+
+    &__image {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', { pageTitle: '商品詳細', description: "ハンドメイド猫グッズのお店 l'atelier Queue の商品詳細ページです。" }) %>
+
+
+<body class="product">
+
+<%- include('../components/common/_header') %>
+
+
+<%- include('../components/common/_gnav') %>
+
+
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list l-container">
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">ホーム</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">商品一覧</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">その他雑貨</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <span aria-current="page">【焼印付】爪とぎ型キーホルダー</span>
+    </li>
+  </ol>
+</nav>
+
+
+<main class="main main--product">
+  <div class="l-container">
+
+    <section class="productSection">
+
+      <div class="productSection__cart cartBox">
+        <h1 class="cartBox__heading">【焼印付】爪とぎ型キーホルダー</h1>
+
+        <div class="cartBox__id">ZK-0012</div>
+
+        <div class="cartBox__price">
+          価格 <span class="cartBox__priceNum">000</span>円<span class="cartBox__priceTax">（税込000円）</span>
+        </div>
+
+        <div class="cartBox__typeWrapper">
+          <div class="cartBox__type">
+            <figure class="cartBox__typeFigure">
+              <img class="cartBox__typeImage" src="../../images/products/zk0012_a.jpg" alt="使用前タイプ">
+            </figure>
+
+            <div class="cartBox__typeText">使用前タイプ</div>
+
+            <form class="cartBox__form" action="#" method="POST">
+              <button class="cartBox__btn" aria-label="【焼印付】爪とぎ型キーホルダー（使用前タイプ）をカートに入れる">カートに入れる</button>
+            </form>
+          </div><!-- /.cartBox__type -->
+
+          <div class="cartBox__type">
+            <figure class="cartBox__typeFigure">
+              <img class="cartBox__typeImage" src="../../images/products/zk0012_b.jpg" alt="使用前タイプ">
+            </figure>
+
+            <div class="cartBox__typeText">使用後タイプ</div>
+
+            <form class="cartBox__form" action="#" method="POST">
+              <button class="cartBox__btn" aria-label="【焼印付】爪とぎ型キーホルダー（使用後タイプ）をカートに入れる">カートに入れる</button>
+            </form>
+          </div><!-- /.cartBox__type -->
+        </div><!-- /.cartBox__typeWrapper -->
+      </div><!-- /.productSection__cart.cartBox -->
+
+      <section class="productSection__info">
+        <h2 class="productSection__infoHeading">商品情報</h2>
+
+        <p class="productSection__infoText">
+          あの「猫の爪とぎ」が可愛らしいミニチュアサイズのキーホルダーになりました！<br>
+          <br>
+          小さくても作りはしっかり。外側ケースは手触りの良いパイン材の木枠、裏面には当店ロゴの猫型焼印付きでオシャレ♪<br>
+          <br>
+          使用前タイプ、使用後タイプの2種類をご用意しています。<br>
+          <br>
+          ■サイズ：H：約100 × W：23 × D：約15（mm）<br>
+          ■重量：約72g<br>
+          ■素材：パイン材・ダンボール・アルミ（ボールチェーン）
+        </p>
+      </section><!-- /.productSection__info -->
+
+      <div class="productSection__photo">
+        <!-- <figure class="productSection__figure" role="tabpanel" aria-hidden="false">
+          <img class="productSection__image" src="/src/images/products/pd001.jpg" alt="" width="750" height="750">
+        </figure>
+
+        <figure class="productSection__figure" role="tabpanel" aria-hidden="true">
+          <img class="productSection__image" src="/src/images/products/pd001_02.jpg" alt="" width="750" height="750">
+        </figure>
+
+        <figure class="productSection__figure" role="tabpanel" aria-hidden="true">
+          <img class="productSection__image" src="/src/images/products/pd001_03.jpg" alt="" width="750" height="750">
+        </figure> -->
+
+        <figure class="productSection__figure">
+          <img class="productSection__image" src="../../images/products/pd001.jpg" alt="" width="750" height="750">
+        </figure>
+
+        <ul class="productSection__thumbnails" role="tablist">
+          <li class="productSection__thumbnail productSection__thumbnail--current">
+            <img class="productSection__thumbnailImage" src="../../images/products/pd001.jpg" alt="" width="750" height="750" aria-selected="true">
+          </li>
+
+          <li class="productSection__thumbnail">
+            <img class="productSection__thumbnailImage" src="../../images/products/pd001_02.jpg" alt="" width="750" height="750" aria-selected="false">
+          </li>
+
+          <li class="productSection__thumbnail">
+            <img class="productSection__thumbnailImage" src="../../images/products/pd001_03.jpg" alt="" width="750" height="750" aria-selected="false">
+          </li>
+        </ul>
+      </div><!-- /.productSection__photo -->
+
+    </section>
+
+
+    <div class="main--product__content">
+      <figure class="main--product__contentFigure">
+        <img class="main--product__contentImage" src="/src/images/products/zk0012_cont01.jpg" alt="" width="800" height="540">
+      </figure>
+
+      <p class="main--product__contentText">裏面の焼印はひとつひとつオーナーが手押しで押印しています！ 手で押しているのでひとつひとつ焼色や場所などが微妙に違いますが、そこは「手作りの味」ということでご容赦くださいませ！</p>
+
+      <p class="main--product__contentText">本文テキスト16px・行間1.75フリーテキストが入ります。本文テキスト16px・行間1.75フリーテキストが入ります。本文テキスト16px・行間1.75フリーテキストが入ります。本文テキスト16px・行間1.75フリーテキストが入ります。本文テキスト16px・行間1.75フリーテキストが入ります。</p>
+
+      <p class="main--product__contentText">本文テキスト16px・行間1.75フリーテキストが入ります。本文テキスト16px・行間1.75フリーテキストが入ります。本文テキスト16px・行間1.75フリーテキストが入ります。本文テキスト16px・行間1.75フリーテキストが入ります。本文テキスト16px・行間1.75フリーテキストが入ります。</p>
+    </div><!-- /.main--product__content -->
+
+
+    <div class="main--product__cartBox01 cartBox cartBox--bottom cartBox--2col">
+      <div class="cartBox__body">
+        <div class="cartBox__heading">【焼印付】爪とぎ型キーホルダー</div>
+
+        <div class="cartBox__id">ZK-0012</div>
+
+        <div class="cartBox__price">
+          価格 <span class="cartBox__priceNum">000</span>円<span class="cartBox__priceTax">（税込000円）</span>
+        </div>
+
+        <!-- <div class="cartBox__type"> -->
+          <form class="cartBox__form" action="#" method="POST">
+            <button class="cartBox__btn" aria-label="【焼印付】爪とぎ型キーホルダーをカートに入れる">カートに入れる</button>
+          </form>
+        <!-- </div> -->
+      </div><!-- /.cartBox__body -->
+
+      <figure class="cartBox__figure">
+        <img class="cartBox__image" src="../../images/products/pd001.jpg" alt="">
+      </figure>
+    </div><!-- /.cartBox -->
+
+
+    <div class="main--product__cartBox02 cartBox cartBox--bottom">
+      <div class="cartBox__heading">【焼印付】爪とぎ型キーホルダー</div>
+
+      <div class="cartBox__id">ZK-0012</div>
+
+      <div class="cartBox__price">
+        価格 <span class="cartBox__priceNum">000</span>円<span class="cartBox__priceTax">（税込000円）</span>
+      </div>
+
+      <div class="cartBox__typeWrapper">
+        <div class="cartBox__type">
+          <figure class="cartBox__typeFigure">
+            <img class="cartBox__typeImage" src="../../images/products/zk0012_a.jpg" alt="使用前タイプ">
+          </figure>
+
+          <div class="cartBox__typeText">使用前タイプ</div>
+
+          <form class="cartBox__form" action="#" method="POST">
+            <button class="cartBox__btn" aria-label="【焼印付】爪とぎ型キーホルダー（使用前タイプ）をカートに入れる">カートに入れる</button>
+          </form>
+        </div><!-- /.cartBox__type -->
+
+        <div class="cartBox__type">
+          <figure class="cartBox__typeFigure">
+            <img class="cartBox__typeImage" src="../../images/products/zk0012_b.jpg" alt="使用前タイプ">
+          </figure>
+
+          <div class="cartBox__typeText">使用後タイプ</div>
+
+          <form class="cartBox__form" action="#" method="POST">
+            <button class="cartBox__btn" aria-label="【焼印付】爪とぎ型キーホルダー（使用後タイプ）をカートに入れる">カートに入れる</button>
+          </form>
+        </div><!-- /.cartBox__type -->
+      </div><!-- /.cartBox__typeWrapper -->
+    </div><!-- /.productSection__cart.cartBox -->
+
+
+    <nav class="main--product__pagination pagination02">
+      <ol class="pagination02__list">
+        <li class="pagination02__item">
+          <a class="pagination02__prev" href="">前の商品</a>
+        </li>
+
+        <li class="pagination02__item">
+          <a class="pagination02__top" href="">「その他雑貨」カテゴリトップへ戻る</a>
+        </li>
+
+        <li class="pagination02__item">
+          <a class="pagination02__next" href="">次の商品</a>
+        </li>
+      </ol>
+    </nav>
+
+  </div><!-- /.l-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

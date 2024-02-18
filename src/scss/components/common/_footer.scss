@@ -1,0 +1,38 @@
+// 共通・フッター
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+
+.footer {
+  position: relative;
+  padding-block: 50px;
+  background-color: g.$mainColor;
+
+  &__pageTopBtn {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+  }
+
+  &__copyright {
+    margin-block-start: 60px;
+    color: g.$whiteColor;
+    text-align: center;
+
+    &Text {
+      @include g.fz(12);
+    }
+  }
+
+
+  @include g.mq() {
+
+    &__pageTopBtn {
+      top: -60px;
+      right: 30px;
+    }
+  }
+}

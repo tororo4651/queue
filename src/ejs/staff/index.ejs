@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', { pageTitle: 'ねこ店員紹介　Cat Staff', description: "ハンドメイド猫グッズのお店 l'atelier Queue のねこ店員紹介ページです。" }) %>
+
+
+<body class="staff">
+
+<%- include('../components/common/_header') %>
+
+
+<%- include('../components/common/_gnav') %>
+
+
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list l-container">
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">ホーム</a>
+    </li>
+
+    <li class="breadcrumb__item">
+      <span aria-current="page">ねこ店員紹介</span>
+    </li>
+  </ol>
+</nav>
+
+
+<main class="main main--staff">
+  <div class="l-container">
+
+    <h1 class="lv1Heading">
+      ねこ店員紹介
+      <span class="lv1Heading__en">Cat Staff</span>
+    </h1>
+
+    <p class="pageLead">
+      当店の優秀な（？）ねこ店員さんたちを紹介します。<br>
+      店員さんの日々の活動はねこブログにて不定期に報告しております。よろしければそちらもご覧ください♪
+    </p>
+
+    <section class="main--staff__section staffSection staffSection--reverse">
+      <div class="staffSection__body">
+        <h2 class="staffSection__heading">あんずセンパイ</h2>
+
+        <p class="staffSection__text">
+          ふわふわ系女子。<br>
+          控えめに見えて実は要求が通るまで一歩も惹かない強情な性格。後輩に指導を試みてよく返り討ちに遭っている。
+        </p>
+      </div><!-- /.staffSection__body -->
+
+      <figure class="staffSection__figure">
+        <img class="staffSection__image"
+          srcset="../../images/staff/img_staff_anzu-400.jpg 400w,
+                  ../../images/staff/img_staff_anzu-800.jpg 800w,
+                  ../../images/staff/img_staff_anzu-1600.jpg 1600w,
+                  ../../images/staff/img_staff_anzu-2400.jpg 2400w"
+
+          sizes="(max-width: 767px) 100vw,
+                 (min-width: 768px) 50vw"
+
+          src="/src/images/staff/img_staff_anzu-800.jpg" alt="" width="800" height="500">
+      </figure>
+    </section>
+
+
+    <section class="main--staff__section staffSection">
+      <div class="staffSection__body">
+        <h2 class="staffSection__heading">ちゃまめコウハイ</h2>
+
+        <p class="staffSection__text">
+          前職不明の中途採用。<br>
+          自己主張強めだけど意外と人見知り。<br>
+          あんずのものはオレのもの。オレのものはオレのもの。
+        </p>
+      </div><!-- /.staffSection__body -->
+
+      <figure class="staffSection__figure">
+        <img class="staffSection__image" src="/src/images/staff/img_staff_chamame.jpg" alt="" width="800" height="500">
+      </figure>
+    </section>
+
+  </div><!-- /.l-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+// セクション・トップページ01
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.topSection01 {
+
+  &__list {
+    margin-block-start: 20px;
+    border-bottom: dashed 1px g.$x-baseColor;
+    line-height: 1.5;
+
+    &Date {
+      border-top: dashed 1px g.$x-baseColor;
+      padding-block-start: 15px;
+    }
+
+    &Desc {
+      padding-block-end: 15px;
+    }
+
+    &Link {
+      display: inline-block;
+    }
+  }
+
+
+  @include g.mq() {
+
+    &__list {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+
+      &Date {
+        width: 6em;
+        padding-block: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      &Desc {
+        width: calc(100% - 6em);
+        padding-inline-start: 1em;
+        padding-block: 20px;
+        border-top: dashed 1px g.$x-baseColor;
+        display: flex;
+        align-items: center;
+      }
+
+      &Link {
+        margin-inline-start: 1em;
+      }
+    }
+  }
+}
