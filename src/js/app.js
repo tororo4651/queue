@@ -8,7 +8,9 @@ import $ from 'jquery';
 // 他の JavaScriptファイルの読み込み
 import './modules/common.js';
 
+
 // import { greet } from './modules/common';
+
 // console.log(greet('上杉'));
 
 

@@ -1,6 +1,4 @@
 // スマートフォン用メインメニューの開閉
-
-
 const gNavBtn = document.querySelector('.gNavBtn');
 const gNavBtnText = document.querySelector('.gNavBtn__text');
 const sp_gNav = document.querySelector('.sp-gNav');
@@ -106,7 +104,6 @@ faqBtns.forEach((faqBtn, index) => {
     } else {
       // ボタン
       const openFaqBtns = document.querySelectorAll('.faqAccordion__questionBtn.is-answerOpen');
-
       openFaqBtns.forEach((openFaqBtn) => {
         openFaqBtn.classList.remove('is-answerOpen');
       });
@@ -115,7 +112,6 @@ faqBtns.forEach((faqBtn, index) => {
 
       // Answer
       const faqAccordionAnswers = document.querySelectorAll('.faqAccordion__answer');
-
       faqAccordionAnswers.forEach((faqAccordionAnswer) => {
         faqAccordionAnswer.style.maxHeight = null;
       });

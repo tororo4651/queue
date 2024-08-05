@@ -6,27 +6,22 @@
 
 
 
+
+// ビルトインモジュール
+@use "sass:math";
+
+
+
+
 // rem
 @function rem($size, $root: 16) {
   @return math.div($size, $root) * 1rem;
+  // @return calc($size / $root * 1rem);
 }
 
 // 呼び出し
 // .test {
-//   margin: rem(24);
-// }
-
-
-
-
-// rem（フォントサイズ）
-@function fz($size, $root: 16) {
-  @return math.div($size, $root) * 1rem;
-}
-
-// 呼び出し
-// .test {
-//   font-size: fz(24);
+    // margin: rem(24);
 // }
 
 

@@ -60,6 +60,7 @@
     color: g.$mainColor;
     @include g.fz(24);
     font-weight: bold;
+    line-height: 1.5;
   }
 
   &__btn {
@@ -83,9 +84,9 @@
       height: 47px;
       margin-inline-end: 10px;
       background-image: url(../images/common/ico_cat.svg);
+      background-repeat: no-repeat;
       background-position: left bottom;
       background-size: contain;
-      background-repeat: no-repeat;
     }
 
     &__text {

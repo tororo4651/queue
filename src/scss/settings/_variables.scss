@@ -26,8 +26,8 @@
   // 02
 
   // 最小サイズ、最大サイズ、最小画面幅、最大画面幅
-  --min-viewport02: 375;
-  --max-viewport02: 768;
+  --min-viewport02: ;
+  --max-viewport02: ;
 
   // a 傾き
   --slope02: calc((var(--max-size02) - var(--min-size02)) / (var(--max-viewport02) - var(--min-viewport02)));
